@@ -1,0 +1,18 @@
+<!-- src/app/add-edit/add-edit.component.html -->
+
+<mat-card>
+    <h2>{{ isEditing ? 'Edit' : 'Add' }} Entry</h2>
+    <form [formGroup]="saleForm" (ngSubmit)="submitForm()">
+      <mat-form-field>
+        <input matInput placeholder="Product" formControlName="product">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="number" placeholder="Quantity" formControlName="quantity">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="number" placeholder="Revenue" formControlName="revenue">
+      </mat-form-field>
+      <button type="submit" mat-raised-button color="primary">{{ isEditing ? 'Update' : 'Add' }}</button>
+    </form>
+  </mat-card>
+  

@@ -1,0 +1,28 @@
+<mat-card>
+    <h2>Chart Visualization</h2>
+    <div class="chart-container">
+      <ngx-charts-bar-vertical
+        [view]="[700, 400]"
+        [results]="barChartData"
+        [xAxis]="true"
+        [yAxis]="true"
+        [legend]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        xAxisLabel="Products"
+        yAxisLabel="Revenue">
+      </ngx-charts-bar-vertical>
+    </div>
+  
+    <!-- <div class="chart-container">
+      <ngx-charts-pie
+        [view]="[700, 400]"
+        [results]="pieChartData"
+        [doughnut]="false"
+        [gradient]="true"
+        [showLegend]="true"
+        (select)="onPieChartSelect($event)">
+      </ngx-charts-pie>
+    </div> -->
+  </mat-card>
+  
